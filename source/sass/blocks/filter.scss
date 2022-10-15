@@ -1,0 +1,20 @@
+@import "./global/variables.scss";
+
+.filter .filter__toggle:first-child {
+  margin-bottom: 26px;
+}
+
+.filter__toggle {
+  padding: 10px 14px;
+}
+
+// tablet-version
+@media (min-width: $tablet-width) {
+  .filter .filter__toggle:first-child {
+    margin-bottom: 0;
+  }
+
+  .filter__toggle {
+    padding: 8px 4px;
+  }
+}

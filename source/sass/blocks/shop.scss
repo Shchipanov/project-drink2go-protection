@@ -1,0 +1,40 @@
+@import "./global/variables.scss";
+
+.shop__title {
+  font-family: "montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+  color: #7859cf;
+}
+
+.shop__link {
+  font-family: "montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #333333;
+  text-decoration: none;
+}
+
+// mobile-only-version
+@media (max-width: $mobile-width-only) {
+  .shop {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "";
+      height: 1px;
+      background-color: #f0ebff;
+      left: -20px;
+      width: 320px;
+      bottom: 0;
+    }
+  }
+}

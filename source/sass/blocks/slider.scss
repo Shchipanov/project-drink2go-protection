@@ -1,0 +1,66 @@
+@import "./global/variables.scss";
+
+.slider__arrows {
+  position: absolute;
+  height: 656px;
+}
+
+.slider__toggles {
+  display: none;
+}
+
+// desktop-version
+@media (min-width: $desktop-width) {
+  .slider {
+    position: relative;
+  }
+
+  .slider__arrows {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+  }
+
+  .slider__toggles {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .slider__toggle {
+    display: flex;
+    align-items: center;
+    margin-right: 8px;
+    outline: none;
+    width: 62px;
+    height: 4px;
+    border: none;
+    background: #ffffff;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &--current {
+      background-color: #7859cf;
+    }
+
+    &:hover {
+      background-color: #7859cf40;
+    }
+
+    &:focus {
+      background-color: rgba(120, 89, 207, 0.25);
+    }
+
+    &:active {
+      background-color: #7859cf;
+    }
+  }
+}

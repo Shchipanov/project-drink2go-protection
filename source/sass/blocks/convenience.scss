@@ -1,0 +1,41 @@
+@import "./global/variables.scss";
+
+.convenience {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    background-image: url("../img/main-images/features-images/convenience-icon.svg");
+    background-repeat: no-repeat;
+    width: 52px;
+    height: 56px;
+    left: 134px;
+    top: 0;
+  }
+
+  .reasons-list__item__description {
+    width: 235px;
+    margin: auto;
+  }
+}
+
+// tablet-version
+@media (min-width: $tablet-width) {
+  .convenience {
+    &::before {
+      left: 0;
+      top: 0;
+    }
+  }
+}
+
+// desktop-version
+@media (min-width: $desktop-width) {
+  .convenience {
+    &::before {
+      left: 133px;
+      top: 0;
+    }
+  }
+}

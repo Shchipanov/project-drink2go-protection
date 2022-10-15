@@ -1,0 +1,31 @@
+@import "./global/variables.scss";
+
+.nul {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 9px;
+    height: 2px;
+    background-color: #bdbdbd;
+    right: -26px;
+    top: 18px;
+  }
+}
+
+// tablet-version
+@media (min-width: $tablet-width) {
+  .nul::before {
+    right: -23px;
+    top: 18px;
+  }
+}
+
+// desktop-version
+@media (min-width: $desktop-width) {
+  .nul::before {
+    right: -29px;
+    top: 21px;
+  }
+}

@@ -1,0 +1,43 @@
+.copyright__link {
+  font-family: "montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  text-decoration: none;
+  color: #bdbdbd;
+  position: relative;
+  width: 206px;
+
+  svg {
+    position: absolute;
+    right: 0;
+    top: 0;
+    fill: #bdbdbd;
+  }
+
+  &:hover {
+    color: #7859cf;
+
+    svg {
+      fill: #7859cf;
+    }
+  }
+
+  &:focus {
+    outline: none;
+    color: #7859cf;
+
+    svg {
+      fill: #7859cf;
+    }
+  }
+
+  &:active {
+    color: #593cac;
+
+    svg {
+      fill: #593cac;
+    }
+  }
+}

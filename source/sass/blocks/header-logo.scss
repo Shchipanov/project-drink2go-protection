@@ -1,0 +1,84 @@
+@import "./global/variables.scss";
+
+.header-logo__description {
+  display: none;
+}
+
+.header-logo__wrapper {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 60px;
+    height: 60px;
+    background-color: #ffffff;
+    left: -15px;
+    z-index: -1;
+    top: -12px;
+  }
+}
+
+.header-logo:hover .header-logo__wrapper::before {
+  background-color: #f0ebff;
+}
+
+.header-logo:focus {
+  outline: none;
+
+  .header-logo__wrapper::before {
+    background-color: #f0ebff;
+  }
+}
+
+// tablet-version
+@media (min-width: $tablet-width) {
+  .header-logo__image {
+    width: 82px;
+    height: 36px;
+  }
+
+  .header-logo__wrapper::before {
+    width: 115px;
+  }
+}
+
+// desktop-version
+@media (min-width: $desktop-width) {
+  .header-logo {
+    font-family: "montserrat", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #333333;
+    text-decoration: none;
+
+    picture {
+      padding-right: 20px;
+    }
+  }
+
+  .header-logo__description {
+    display: block;
+    padding-bottom: 7px;
+  }
+
+  .header-logo__wrapper {
+    display: flex;
+    width: 320px;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1px;
+
+    &::before {
+      width: 195px;
+    }
+  }
+
+  .header-logo__image {
+    padding-right: 20px;
+    width: 300px;
+    height: 36px;
+  }
+}

@@ -1,0 +1,155 @@
+@import "./global/variables.scss";
+
+.form__group {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.form__wrapper {
+  padding-left: 2px;
+}
+
+.form__name {
+  font-family: "montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #333333;
+  text-align: start;
+  padding: 0;
+  padding-bottom: 32px;
+}
+
+.form__wrapper:nth-child(2) .form__name {
+  padding-bottom: 27px;
+}
+
+.form__range {
+  width: 280px;
+  margin-bottom: 24px;
+}
+
+.form__group__list {
+  margin: 0;
+  margin-bottom: 22px;
+  list-style-type: none;
+  padding: 0;
+  text-align: start;
+}
+
+.form__bar {
+  width: 241px;
+  right: 28px;
+  left: 0;
+}
+
+.form__scale {
+  margin-bottom: 37px;
+}
+
+.form__group__item {
+  margin-bottom: 22px;
+}
+
+.form__bar--disabled {
+  background-color: #bdbdbd;
+
+  .range__toggle:disabled {
+    border: 2px solid #bdbdbd;
+    background-color: #f8f8f8;
+  }
+}
+
+.form__filter {
+  display: flex;
+  flex-direction: column;
+  width: 160px;
+  margin: auto;
+  margin-bottom: 33px;
+}
+
+// tablet-version
+@media (min-width: $tablet-width) {
+  .form__wrapper {
+    display: flex;
+    margin-bottom: 10px;
+
+    .form__group:first-child {
+      margin-right: 21px;
+    }
+
+    .form__group:nth-child(2) {
+      margin-right: 37px;
+    }
+  }
+
+  .form__range {
+    padding-left: 7px;
+    width: 220px;
+  }
+
+  .form__bar {
+    width: 200px;
+  }
+
+  .form__filter {
+    width: 316px;
+    flex-direction: inherit;
+    justify-content: space-between;
+    margin-bottom: 36px;
+    margin-left: 179px;
+  }
+
+  .form__name {
+    padding-bottom: 30px;
+  }
+
+  .form__scale {
+    margin-bottom: 34px;
+  }
+
+  .form__group__item {
+    margin-bottom: 20px;
+  }
+}
+
+// desktop-version
+@media (min-width: $desktop-width) {
+  .form__wrapper {
+    flex-direction: column;
+
+    .form__group:first-child,
+    .form__group:nth-child(2) {
+      margin-right: 0;
+    }
+  }
+
+  .form__name {
+    padding-bottom: 30px;
+  }
+
+  .form__range {
+    padding-left: 0;
+    width: 100%;
+    margin-bottom: 33px;
+  }
+
+  .form__scale {
+    margin-bottom: 32px;
+  }
+
+  .form__container {
+    width: 318px;
+    margin-right: 30px;
+  }
+
+  .form__group__list {
+    margin: 0 0 30px;
+  }
+
+  .form__filter {
+    margin: 0;
+  }
+}

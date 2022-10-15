@@ -1,0 +1,98 @@
+.social__link {
+  display: block;
+  max-height: 20px;
+}
+
+.social__link--vkontakte,
+.social__link--ok {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 40px;
+    height: 40px;
+    left: -10px;
+    top: -10px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    z-index: -1;
+  }
+
+  svg {
+    fill: #bdbdbd;
+  }
+
+  &:hover {
+    svg {
+      fill: #7859cf;
+    }
+  }
+
+  &:hover::before {
+    background-color: #f0ebff;
+  }
+
+  &:focus {
+    outline: none;
+
+    svg {
+      fill: #7859cf;
+    }
+  }
+
+  &:focus::before {
+    background-color: #f0ebff;
+  }
+
+  &:active::before {
+    background-color: #7859cf40;
+  }
+}
+
+.social__link--pinterest {
+  max-height: 22px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 40px;
+    height: 40px;
+    left: -9px;
+    top: -9px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    z-index: -1;
+  }
+
+  svg {
+    fill: #bdbdbd;
+  }
+
+  &:hover {
+    svg {
+      fill: #7859cf;
+    }
+  }
+
+  &:hover::before {
+    background-color: #f0ebff;
+  }
+
+  &:focus {
+    outline: none;
+
+    svg {
+      fill: #7859cf;
+    }
+  }
+
+  &:focus::before {
+    background-color: #f0ebff;
+  }
+
+  &:active::before {
+    background-color: #7859cf40;
+  }
+}

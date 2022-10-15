@@ -1,0 +1,122 @@
+@import "./global/variables.scss";
+
+.main-nav__list {
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav__list:last-child {
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 22px;
+  right: 60px;
+}
+
+// mobile-only-version
+@media (max-width: $mobile-width-only) {
+  .main-nav--closed {
+    .site-list {
+      display: none;
+    }
+
+    .main-header__toggle {
+      padding: 22px;
+
+      svg {
+        display: block;
+      }
+    }
+
+    .main-header__toggle::after,
+    .main-header__toggle::before {
+      display: none;
+    }
+  }
+
+  .main-nav--nojs {
+    display: flex;
+    flex-direction: column;
+
+    .main-header__toggle + .main-nav__list {
+      display: block;
+      position: inherit;
+      padding: 0;
+      margin: 0;
+      list-style-type: none;
+      width: 320px;
+      right: 0;
+      top: 60px;
+      text-align: center;
+      z-index: 2;
+      order: 1;
+    }
+
+    .main-nav__list ~ .main-nav__list {
+      position: inherit;
+      order: 0;
+      padding-left: 190px;
+    }
+
+    .main-container {
+      margin-top: 228px;
+    }
+
+    .main-header__toggle {
+      display: none;
+    }
+
+    .main-header {
+      padding-bottom: 290px;
+    }
+  }
+
+  .main-nav__list:last-child {
+    width: 200px;
+    justify-content: flex-end;
+  }
+}
+
+// tablet-version
+@media (min-width: $tablet-width) {
+  .main-nav {
+    display: flex;
+    align-items: center;
+    padding-top: 5px;
+
+    .main-nav__list {
+      padding-right: 60px;
+      align-items: baseline;
+      flex-wrap: wrap;
+    }
+  }
+
+  .main-nav__list {
+    display: flex;
+
+    &:last-child {
+      padding-right: 0;
+      position: inherit;
+    }
+  }
+}
+
+// desktop-version
+@media (min-width: $desktop-width) {
+  .main-nav {
+    justify-content: space-between;
+    width: 882px;
+    padding-top: 0;
+  }
+
+  .main-header__toggle + .main-nav__list {
+    width: 460px;
+    padding-right: 0;
+    justify-content: space-between;
+  }
+
+  .main-nav__list ~ .main-nav__list {
+    width: 261px;
+    justify-content: space-between;
+  }
+}

@@ -1,0 +1,43 @@
+@import "./global/variables.scss";
+
+.cheerfulness {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    background-image: url("../img/main-images/features-images/cheerfulness-icon.svg");
+    background-repeat: no-repeat;
+    width: 52px;
+    height: 56px;
+    left: 134px;
+    top: 0;
+  }
+}
+
+// mobile-only-version
+@media (max-width: $mobile-width-only) {
+  .cheerfulness {
+    padding-top: 66px;
+  }
+}
+
+// tablet-version
+@media (min-width: $tablet-width) {
+  .cheerfulness {
+    &::before {
+      left: 0;
+      top: 0;
+    }
+  }
+}
+
+// desktop-version
+@media (min-width: $desktop-width) {
+  .cheerfulness {
+    &::before {
+      left: 133px;
+      top: 0;
+    }
+  }
+}

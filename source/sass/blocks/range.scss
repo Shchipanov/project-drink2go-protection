@@ -1,0 +1,95 @@
+@import "./global/variables.scss";
+
+.range__toggle {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background-color: #ffffff;
+  border: 2px solid #9070ec;
+  border-radius: 50%;
+
+  &:hover::before {
+    position: absolute;
+    content: "";
+    width: 16px;
+    height: 16px;
+    background-color: #7859cf40;
+    border-radius: 50px;
+    left: 2px;
+    top: 2px;
+  }
+
+  &:active::before {
+    background-color: #7859cf;
+  }
+
+  &:focus-visible {
+    outline: 2px solid #9070ec;
+    outline-offset: -2px;
+    background-color: #7859cf;
+  }
+}
+
+.range__scale {
+  position: relative;
+  height: 2px;
+  background-color: #e2e2e2;
+}
+
+.range__bar {
+  position: absolute;
+  height: 4px;
+  background-color: #9070ec;
+  left: 0;
+  width: 260px;
+}
+
+.range__inputs {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.range__input {
+  margin: 0;
+  padding: 0;
+  width: 118px;
+  height: 38px;
+  text-align: center;
+  box-sizing: border-box;
+  appearance: textfield;
+
+  &::placeholder {
+    margin: 0;
+    padding: 7px 10px;
+  }
+}
+
+.range__input::-webkit-outer-spin-button,
+.range__input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+// tablet-version
+@media (min-width: $tablet-width) {
+  .range__input {
+    width: 92px;
+    height: 40px;
+  }
+
+  .range__bar {
+    width: 200px;
+  }
+}
+
+// desktop-version
+@media (min-width: $desktop-width) {
+  .range__bar {
+    width: 296px;
+  }
+
+  .range__input {
+    width: 134px;
+  }
+}

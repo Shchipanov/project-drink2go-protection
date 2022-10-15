@@ -1,0 +1,39 @@
+@import "./global/variables.scss";
+
+.reasons-list {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.reasons-list__item__description {
+  font-family: "montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #333333;
+}
+
+.reasons-list__item__title {
+  font-family: "montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 32px;
+  color: #333333;
+}
+
+// tablet-version
+@media (min-width: $tablet-width) {
+  .reasons-list__item__title {
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .reasons-list__item__description {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}

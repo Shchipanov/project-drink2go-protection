@@ -1,0 +1,61 @@
+@import "./global/variables.scss";
+
+.forward__link {
+  padding: 11px 17px 10px 18px;
+  background-color: #ffffff;
+  border-radius: 4px;
+
+  svg {
+    fill: rgb(120, 89, 207);
+    transform: rotate(-90deg);
+  }
+
+  &:hover {
+    background-color: #9070ec;
+    color: #ffffff;
+  }
+
+  &:hover svg {
+    fill: #ffffff;
+  }
+
+  &:focus {
+    outline: none;
+    background-color: #9070ec;
+  }
+
+  &:focus svg {
+    fill: #ffffff;
+  }
+
+  &:active {
+    background-color: #593cac;
+  }
+
+  &:disabled {
+    background-color: #e2e2e2;
+  }
+
+  &:disabled svg {
+    fill: #ffffff;
+  }
+}
+
+// tablet-version
+@media (min-width: $tablet-width) {
+  .forward__link {
+    font-family: "montserrat", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    text-decoration: none;
+    color: #7859cf;
+    padding: 9px 44px 7px 46px;
+    border-radius: 0 4px 4px 0;
+
+    svg {
+      display: none;
+    }
+  }
+}

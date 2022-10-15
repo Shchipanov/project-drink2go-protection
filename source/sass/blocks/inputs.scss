@@ -1,0 +1,37 @@
+.inputs-container__input {
+  font-family: "montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #333333;
+  border: 2px solid #9070ec;
+  border-radius: 4px;
+  background: #ffffff;
+  appearance: none;
+
+  &:active {
+    outline: 2px solid #9070ec;
+    outline-offset: -2px;
+  }
+
+  &:focus-visible {
+    outline: 2px solid #593cac;
+    outline-offset: -2px;
+  }
+
+  &:disabled {
+    border: 2px solid #e2e2e2;
+    background-color: #f8f8f8;
+    color: #bdbdbd;
+  }
+
+  &::placeholder {
+    font-family: "montserrat", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #bdbdbd;
+  }
+}

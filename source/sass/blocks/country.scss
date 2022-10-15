@@ -1,0 +1,121 @@
+@import "./global/variables.scss";
+
+.country {
+  padding-left: 2px;
+}
+
+.country__list .country__item:last-child {
+  margin-bottom: 32px;
+}
+
+.country__list .country__item:nth-child(2) {
+  margin-bottom: 18px;
+}
+
+.country__item {
+  font-family: "montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #333333;
+  padding-left: 52px;
+}
+
+.country__label {
+  position: relative;
+}
+
+.country__control-mark {
+  position: absolute;
+  width: 38px;
+  height: 20px;
+  background-color: #bdbdbd;
+  border: 2px solid #bdbdbd;
+  border-radius: 50px;
+  left: -52px;
+  top: -2px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: #ffffff;
+    border-radius: 50px;
+    left: 0;
+    top: 0;
+  }
+
+  &:hover {
+    border: 2px solid #9070ec;
+    background-color: #7859cf40;
+  }
+
+  &:hover::before {
+    background-color: #ffffff;
+  }
+
+  &:focus {
+    border: 2px solid #9070ec;
+    background-color: #7859cf40;
+  }
+}
+
+.country__input[type="checkbox"]:checked + .country__control-mark {
+  background-color: #7859cf;
+  border: 2px solid #7859cf;
+
+  &::before {
+    left: 18px;
+  }
+}
+
+.country__input[type="checkbox"]:disabled + .country__control-mark {
+  border: 2px solid #e2e2e2;
+  background-color: #e2e2e2;
+
+  &::before {
+    background-color: #f8f8f8;
+  }
+}
+
+.country__input[type="checkbox"]:checked:disabled + .country__control-mark {
+  border: 2px solid #e2e2e2;
+  background-color: #e2e2e2;
+
+  &::before {
+    background-color: #bdbdbd;
+  }
+}
+
+.country__input[type="checkbox"]:disabled ~ .country__span {
+  color: #bdbdbd;
+}
+
+.country__input[type="checkbox"]:focus + .country__control-mark {
+  border: 2px solid #9070ec;
+  background-color: #7859cf40;
+
+  &::before {
+    background-color: #ffffff;
+  }
+}
+
+.country__name {
+  padding-bottom: 19px;
+}
+
+// tablet-version
+@media (min-width: $tablet-width) {
+  .country__name {
+    padding-bottom: 20px;
+  }
+}
+
+// desktop-version
+@media (min-width: $desktop-width) {
+  .country__list .country__item:last-child {
+    margin-bottom: 0;
+  }
+}

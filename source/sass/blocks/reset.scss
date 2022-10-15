@@ -1,0 +1,47 @@
+@import "./global/variables.scss";
+
+.reset {
+  font-family: "montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #7859cf;
+  background-color: #ffffff;
+  border-radius: 4px;
+
+  &:hover {
+    background-color: #9070ec;
+    color: #ffffff;
+  }
+
+  &:focus {
+    background-color: #9070ec;
+    outline: none;
+    color: #ffffff;
+  }
+
+  &:active {
+    background-color: #593cac;
+    color: #ffffff;
+  }
+
+  &:disabled {
+    background-color: #bdbdbd;
+    color: #ffffff;
+  }
+}
+
+// tablet-version
+@media (min-width: $tablet-width) {
+  .reset {
+    padding: 8px 6px;
+  }
+}
+
+// desktop-version
+@media (min-width: $desktop-width) {
+  .reset {
+    padding: 8px 11px;
+  }
+}

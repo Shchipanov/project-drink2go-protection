@@ -1,0 +1,115 @@
+@import "./global/variables.scss";
+
+.toggle-order {
+  font-family: "montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+  background-color: #7859cf;
+  border-radius: 4px;
+
+  &:hover {
+    background-color: #9070ec;
+  }
+
+  &:focus {
+    outline: none;
+    background-color: #9070ec;
+  }
+
+  &:active {
+    background-color: #593cac;
+  }
+
+  &:disabled {
+    background-color: #bdbdbd;
+  }
+}
+
+.toggle-previous {
+  background: transparent;
+
+  &:hover {
+    background: linear-gradient(90deg, #ffffff 0%, #ffffff00 100%);
+  }
+
+  &:focus {
+    background: linear-gradient(90deg, #ffffff 0%, #ffffff00 100%);
+    outline: none;
+  }
+
+  &:active {
+    background: linear-gradient(90deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%);
+  }
+}
+
+.toggle-previous__marker {
+  position: absolute;
+  background-image: url("../img/main-images/new-images/new-toggle.svg");
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+  left: 4px;
+  top: 48%;
+}
+
+.toggle-next__marker {
+  position: absolute;
+  background-image: url("../img/main-images/new-images/new-toggle.svg");
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+  right: 4px;
+  top: 48%;
+  transform: rotate(180deg);
+}
+
+.toggle-next {
+  background: transparent;
+
+  &:hover {
+    background: linear-gradient(-90deg, #ffffff 0%, #ffffff00 100%);
+  }
+
+  &:focus {
+    background: linear-gradient(-90deg, #ffffff 0%, #ffffff00 100%);
+    outline: none;
+  }
+
+  &:active {
+    background: linear-gradient(-90deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%);
+  }
+}
+
+.toggle-min {
+  left: 0;
+  top: -10px;
+}
+
+.toggle-max {
+  right: 0;
+  top: -10px;
+}
+
+// tablet-version
+@media (min-width: $tablet-width) {
+  .toggle-previous__marker {
+    left: 34px;
+    top: 310px;
+  }
+
+  .toggle-next__marker {
+    left: 26px;
+    top: 310px;
+  }
+}
+
+// desktop-version
+@media (min-width: $desktop-width) {
+  .toggle-previous__marker,
+  .toggle-next__marker {
+    top: 347px;
+  }
+}

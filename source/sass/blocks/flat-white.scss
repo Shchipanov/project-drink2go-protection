@@ -1,0 +1,48 @@
+@import "./global/variables.scss";
+
+.flat-white {
+  background-color: #f3ebe1;
+}
+
+.flat-white__legend {
+  font-family: "montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #7859cf;
+}
+
+.flat-white__title {
+  font-family: "montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 48px;
+  letter-spacing: 0.02em;
+  color: #333333;
+}
+
+.flat-white__description {
+  font-family: "montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #333333;
+}
+
+// tablet-version
+@media (min-width: $tablet-width) {
+  .flat-white__title {
+    font-size: 56px;
+    line-height: 80px;
+  }
+
+  .flat-white__description {
+    font-size: 20px;
+    line-height: 32px;
+  }
+}

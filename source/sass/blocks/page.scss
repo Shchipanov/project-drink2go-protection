@@ -1,0 +1,35 @@
+@import "./global/variables.scss";
+
+.page {
+  overflow-x: hidden;
+}
+
+.page__body {
+  min-width: 320px;
+  padding: 0;
+  margin: 0 auto;
+  font-family: "montserrat", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  overflow-x: hidden;
+}
+
+// tablet-version
+
+@media (min-width: $tablet-width) {
+  .page__body {
+    min-width: 768px;
+  }
+}
+
+// desktop-version
+@media (min-width: $desktop-width) {
+  .page {
+    margin: auto;
+  }
+
+  .page__body {
+    min-width: 1440px;
+  }
+}
