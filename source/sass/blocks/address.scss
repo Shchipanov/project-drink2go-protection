@@ -1,8 +1,9 @@
 .address {
   position: relative;
 
-  &::before {
+  &::after {
     position: absolute;
+    background-color: #ffffff;
     background-image: url("../img/footer-images/address-image.svg");
     content: "";
     width: 13px;
@@ -10,5 +11,6 @@
     top: 1px;
     left: 0;
     background-repeat: no-repeat;
+    z-index: 1;
   }
 }

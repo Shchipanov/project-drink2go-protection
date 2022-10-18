@@ -38,27 +38,27 @@
   padding-left: 19px;
 
   &:hover {
-    background: #f0ebff;
+    background-color: #f0ebff;
     border-radius: 4px;
     background-image: url("../img/main-images/catalog-images/select-image.svg");
     background-repeat: no-repeat;
-    background-position: right 10px center;
+    background-position: right 9px center;
   }
 
   &:focus {
     outline: none;
-    background: #f0ebff;
+    background-color: #f0ebff;
     border-radius: 4px;
     background-image: url("../img/main-images/catalog-images/select-image.svg");
     background-repeat: no-repeat;
-    background-position: right 10px center;
+    background-position: right 9px center;
   }
 
   &:active {
     background-color: inherit;
     background-image: url("../img/main-images/catalog-images/selectup-image.svg");
     background-repeat: no-repeat;
-    background-position: right 10px center;
+    background-position: right 9px center;
   }
 }
 
